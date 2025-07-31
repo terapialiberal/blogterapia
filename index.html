@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Investigaciones - Terapia Liberal | Análisis Independiente</title>
+    <meta name="description" content="Biblioteca de investigaciones con vistas previas de YouTube para cada video análisis. Análisis independientes sobre economía, geopolítica y filosofía liberal.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4"><div class="flex items-center justify-between"><div class="flex items-center space-x-4"><img src="https://yt3.ggpht.com/ZzVyDrXt4x8YWoKbISHZzC9CCtkEPCN4GRET1Xxf_wssNyw7mfN-xTbBmpwEJHO0DRQrg0Dgug=s68-c-k-c0x00ffffff-no-rj" alt="Terapia Liberal" class="w-12 h-12 rounded-full"><h1 class="text-2xl font-bold gold-text">Terapia Liberal</h1></div><nav class="flex space-x-6"><a href="https://www.youtube.com/@terapialiberal" target="_blank" class="text-gray-300 hover-gold"><i class="fab fa-youtube"></i></a><a href="https://x.com/terapia_liberal" target="_blank" class="text-gray-300 hover-gold"><i class="fa-brands fa-x-twitter"></i></a><a href="https://www.patreon.com/terapialiberal" target="_blank" class="text-gray-300 hover-gold"><i class="fab fa-patreon"></i></a></nav></div></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        
+        <section class="section-bg rounded-2xl py-16 px-8 mb-16">
+            <div class="text-center">
+                <h2 class="text-5xl font-bold mb-4 gold-text">Biblioteca de Investigaciones</h2>
+                <p class="text-gray-300 max-w-3xl mx-auto">Análisis independientes sobre economía, geopolítica y filosofía liberal. Investigaciones profundas que conectan los eventos globales con las agendas ocultas del poder.</p>
+            </div>
+        </section>
+
+        <!-- Featured Analysis -->
+        <section id="featured-analysis" class="mb-16">
+            <!-- Contenido generado por script -->
+        </section>
+
+        <!-- Previous Analysis Section -->
+        <section class="mb-16">
+            <h3 class="text-2xl font-semibold mb-8 gold-text">Análisis Anteriores</h3>
+            <div id="grid-analisis" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Contenido generado por script -->
+            </div>
+        </section>
+
+        <section class="section-bg rounded-2xl p-8">
+            <div class="flex flex-col md:flex-row gap-8 items-center"><div class="md:w-1/3"><img src="https://i.postimg.cc/8C3ZkxNy/1660176107980.jpg" alt="Nicolás Martínez Lage" class="w-48 h-48 rounded-full mx-auto object-cover"></div><div class="md:w-2/3"><h3 class="text-2xl font-bold mb-2 gold-text">Nicolás Martínez Lage</h3><p class="text-gray-400 mb-4">Analista Independiente</p><h4 class="text-xl font-semibold mb-3 gold-text">Sobre Terapia Liberal</h4><p class="text-gray-300 mb-4">Plataforma de análisis independiente que conecta eventos económicos y geopolíticos globales con las agendas de poder. Investigaciones profundas que van más allá de la narrativa mainstream para revelar las estructuras y mecanismos del control financiero mundial.</p><div class="flex gap-4 flex-wrap"><span class="bg-gray-700 px-3 py-1 rounded-lg text-sm">Análisis Económico</span><span class="bg-gray-700 px-3 py-1 rounded-lg text-sm">Geopolítica</span><span class="bg-gray-700 px-3 py-1 rounded-lg text-sm">Filosofía Liberal</span></div></div></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-90 py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center"><div class="flex justify-center space-x-6 mb-4"><a href="https://www.youtube.com/@terapialiberal" target="_blank" class="text-gray-400 hover:text-red-500 transition-colors"><i class="fab fa-youtube text-2xl"></i></a><a href="https://x.com/terapia_liberal" target="_blank" class="text-gray-400 hover-gold transition-colors"><i class="fa-brands fa-x-twitter text-2xl"></i></a><a href="https://www.patreon.com/terapialiberal" target="_blank" class="text-gray-400 hover-gold transition-colors"><i class="fab fa-patreon text-2xl"></i></a></div><p class="text-gray-400">© 2025 Terapia Liberal. Análisis independiente para mentes críticas.</p></div>
+    </footer>
+
+    <script src="js/database.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const featuredSection = document.getElementById('featured-analysis');
+            const grid = document.getElementById('grid-analisis');
+            
+            const featuredArticle = articlesData.find(article => article.isFeatured);
+            const otherArticles = articlesData.filter(article => !article.isFeatured);
+
+            // Render Featured Article
+            if (featuredArticle) {
+                const urlHtml = getArticleUrl(featuredArticle.id);
+                const urlVideo = `https://www.youtube.com/watch?v=${featuredArticle.video_id}`;
+                featuredSection.innerHTML = `
+                    <h3 class="text-2xl font-semibold mb-8 gold-text">Análisis Destacado</h3>
+                    <div class="section-bg rounded-2xl p-8">
+                        <div class="flex flex-col lg:flex-row gap-8">
+                            <div class="lg:w-1/2">
+                                <div class="video-thumbnail-featured" onclick="window.open('${urlVideo}', '_blank')">
+                                    <img src="https://img.youtube.com/vi/${featuredArticle.video_id}/maxresdefault.jpg" alt="${featuredArticle.title}">
+                                    <div class="play-button-featured"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
+                            <div class="lg:w-1/2 flex flex-col">
+                                <div class="date-badge mb-4">${featuredArticle.date} ÚLTIMO ANÁLISIS</div>
+                                <h4 class="text-2xl font-bold mb-4 gold-text">${featuredArticle.title}</h4>
+                                <p class="text-gray-300 mb-6 flex-grow">${featuredArticle.description}</p>
+                                <div class="flex gap-4 mt-auto">
+                                    <a href="${urlHtml}" class="btn-gradient">Ver Análisis Completo</a>
+                                    <a href="${urlVideo}" target="_blank" class="btn-gradient">Ver Video</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+            }
+
+            // Render Other Articles
+            const cardsHTML = otherArticles.map(article => {
+                const urlHtml = getArticleUrl(article.id);
+                const urlVideo = `https://www.youtube.com/watch?v=${article.video_id}`;
+                return `
+                <div class="section-bg rounded-2xl p-6 flex flex-col h-full">
+                    <div class="video-thumbnail mb-4" onclick="window.open('${urlVideo}', '_blank')">
+                        <img src="https://img.youtube.com/vi/${article.video_id}/maxresdefault.jpg" alt="${article.title}">
+                        <div class="play-button"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="flex-grow flex flex-col">
+                        <div class="date-badge mb-3">${article.date} ANÁLISIS PREVIO</div>
+                        <h4 class="text-xl font-bold mb-3 gold-text">${article.title}</h4>
+                        <p class="text-gray-300 mb-4 flex-grow">${article.description}</p>
+                        <div class="flex gap-3 mt-auto">
+                            <a href="${urlHtml}" class="btn-gradient text-sm">Ver Análisis</a>
+                            <a href="${urlVideo}" target="_blank" class="btn-gradient text-sm">Ver Video</a>
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+            grid.innerHTML = cardsHTML;
+        });
+    </script>
+</body>
+</html>
