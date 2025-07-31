@@ -1,1 +1,116 @@
+Usa esta plantilla HTML y reemplaza todos los marcadores de posición {{...}} con el siguiente contenido: [Inserta aquí tu contenido detallado: título, fecha, descripción, secciones, etc.]. El resultado debe ser un archivo HTML válido.
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- INSTRUCCIONES PARA LA IA: Reemplaza '{{TITULO_DEL_ANALISIS}}' con el título real del análisis -->
+    <title>{{TITULO_DEL_ANALISIS}} | Terapia Liberal</title>
+    
+    <!-- INSTRUCCIONES PARA LA IA: Reemplaza '{{DESCRIPCION_DEL_ANALISIS}}' con una breve descripción del análisis -->
+    <meta name="description" content="{{DESCRIPCION_DEL_ANALISIS}}">
+    <meta name="author" content="Terapia Liberal">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Fonts and Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Enlace al CSS externo -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <img src="https://yt3.ggpht.com/ZzVyDrXt4x8YWoKbISHZzC9CCtkEPCN4GRET1Xxf_wssNyw7mfN-xTbBmpwEJHO0DRQrg0Dgug=s68-c-k-c0x00ffffff-no-rj" alt="Terapia Liberal" class="w-12 h-12 rounded-full">
+                    <a href="../index.html" class="text-2xl font-bold gold-text hover:text-yellow-500 transition-colors">Terapia Liberal</a>
+                </div>
+                <nav class="flex space-x-6">
+                    <a href="https://www.youtube.com/@terapialiberal" target="_blank" class="text-gray-300 hover-gold">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://x.com/terapia_liberal" target="_blank" class="text-gray-300 hover-gold">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.patreon.com/terapialiberal" target="_blank" class="text-gray-300 hover-gold">
+                        <i class="fab fa-patreon"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <article class="section-bg rounded-2xl p-8">
+            <!-- INSTRUCCIONES PARA LA IA: Reemplaza '{{FECHA_FORMATEADA}}' con la fecha en formato "DD/MM/AAAA NUEVO ANÁLISIS" -->
+            <div class="date-badge mb-4">{{FECHA_FORMATEADA}}</div>
+            <!-- INSTRUCCIONES PARA LA IA: Reemplaza '{{TITULO_DEL_ANALISIS}}' con el título real del análisis -->
+            <h1 class="text-3xl md:text-4xl font-bold mb-6 gold-text">{{TITULO_DEL_ANALISIS}}</h1>
+            
+            <div class="post-content text-gray-300">
+                <!-- Hero Section con Video Integrado -->
+                <div class="mb-12 text-center">
+                    <!-- INSTRUCCIONES PARA LA IA: Reemplaza '{{FECHA_LETRAS}}' con la fecha en formato legible, por ejemplo, "10 de Agosto, 2025" -->
+                    <p class="text-red-600 font-bold mb-2">{{FECHA_LETRAS}}</p>
+                    <!-- INSTRUCCIONES PARA LA IA: Reemplaza '{{DESCRIPCION_DEL_ANALISIS}}' con una breve descripción del análisis -->
+                    <p class="text-gray-400 mb-6">{{DESCRIPCION_DEL_ANALISIS}}</p>
+                    <!-- INSTRUCCIONES PARA LA IA: Reemplaza '{{ID_VIDEO_YOUTUBE}}' con el ID real del video de YouTube -->
+                    <div class="relative w-full h-0 pb-[56.25%] rounded-lg overflow-hidden shadow-xl">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/{{ID_VIDEO_YOUTUBE}}" title="{{TITULO_DEL_ANALISIS}}" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- INSTRUCCIONES PARA LA IA: A partir de aquí, genera las secciones basándote en el contenido proporcionado. -->
+                <!-- Puedes repetir este bloque <section> por cada sección principal de tu análisis. -->
+
+                <!-- Sección Ejemplo 1 -->
+                <section class="mb-10">
+                    <!-- INSTRUCCIONES PARA LA IA: Reemplaza '{{TITULO_SECCION_1}}' con el título de la primera sección -->
+                    <h2 class="text-2xl font-semibold mb-4 gold-text">{{TITULO_SECCION_1}}</h2>
+                    <!-- INSTRUCCIONES PARA LA IA: Reemplaza '{{CONTENIDO_SECCION_1}}' con el texto de la primera sección. Puedes usar <p> para párrafos, <ul><li> para listas, etc. -->
+                    <div>{{CONTENIDO_SECCION_1}}</div>
+                </section>
+
+                <!-- Sección Ejemplo 2 -->
+                <section class="mb-10">
+                    <!-- INSTRUCCIONES PARA LA IA: Reemplaza '{{TITULO_SECCION_2}}' con el título de la segunda sección -->
+                    <h2 class="text-2xl font-semibold mb-4 gold-text">{{TITULO_SECCION_2}}</h2>
+                    <!-- INSTRUCCIONES PARA LA IA: Reemplaza '{{CONTENIDO_SECCION_2}}' con el texto de la segunda sección. -->
+                    <div>{{CONTENIDO_SECCION_2}}</div>
+                </section>
+
+                <!-- INSTRUCCIONES PARA LA IA: Agrega más bloques <section> según sea necesario para todas las secciones de tu análisis. -->
+                <!-- ... (más secciones) ... -->
+
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-90 py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.youtube.com/@terapialiberal" target="_blank" class="text-gray-400 hover:text-red-500 transition-colors">
+                    <i class="fab fa-youtube text-2xl"></i>
+                </a>
+                <a href="https://x.com/terapia_liberal" target="_blank" class="text-gray-400 hover-gold transition-colors">
+                    <i class="fa-brands fa-x-twitter text-2xl"></i>
+                </a>
+                <a href="https://www.patreon.com/terapialiberal" target="_blank" class="text-gray-400 hover-gold transition-colors">
+                    <i class="fab fa-patreon text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-400">© 2025 Terapia Liberal. Análisis independiente para mentes críticas.</p>
+        </div>
+    </footer>
+
+    <!-- Enlace al JS externo -->
+    <script src="../js/script.js"></script>
+</body>
+</html>
