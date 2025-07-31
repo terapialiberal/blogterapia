@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca de Investigaciones - Terapia Liberal | Análisis Independiente</title>
     <meta name="description" content="Biblioteca de investigaciones con vistas previas de YouTube para cada video análisis. Análisis independientes sobre economía, geopolítica y filosofía liberal.">
-    
-    <!-- Estilos y Fuentes Externas -->
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Header -->
@@ -21,18 +20,22 @@
                     <h1 class="text-2xl font-bold gold-text">Terapia Liberal</h1>
                 </div>
                 <nav class="flex space-x-6">
-                    <a href="https://www.youtube.com/@terapialiberal" target="_blank" class="text-gray-300 hover-gold"><i class="fab fa-youtube"></i></a>
-                    <a href="https://x.com/terapia_liberal" target="_blank" class="text-gray-300 hover-gold"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.patreon.com/terapialiberal" target="_blank" class="text-gray-300 hover-gold"><i class="fab fa-patreon"></i></a>
+                    <a href="https://www.youtube.com/@terapialiberal" target="_blank" class="text-gray-300 hover-gold">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://x.com/terapia_liberal" target="_blank" class="text-gray-300 hover-gold">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.patreon.com/terapialiberal" target="_blank" class="text-gray-300 hover-gold">
+                        <i class="fab fa-patreon"></i>
+                    </a>
                 </nav>
             </div>
         </div>
     </header>
-
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
-        
-        <!-- Library Hero Section (Estático) -->
+        <!-- Library Hero Section -->
         <section class="section-bg rounded-2xl py-16 px-8 mb-16">
             <div class="text-center">
                 <h2 class="text-5xl font-bold mb-4 gold-text">Biblioteca de Investigaciones</h2>
@@ -40,20 +43,39 @@
             </div>
         </section>
 
-        <!-- Featured Analysis (Contenido generado por JS) -->
-        <section id="featured-analysis-container" class="mb-16">
-            <!-- El análisis destacado se insertará aquí -->
-        </section>
-
-        <!-- Previous Analysis Section (Contenido generado por JS) -->
+        <!-- Featured Analysis -->
         <section class="mb-16">
-            <h3 class="text-2xl font-semibold mb-8 gold-text">Análisis Anteriores</h3>
-            <div id="grid-analisis" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- La cuadrícula de análisis anteriores se insertará aquí -->
+            <h3 class="text-2xl font-semibold mb-8 gold-text">Análisis Destacado</h3>
+            <div class="section-bg rounded-2xl p-8">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/2">
+                        <div class="video-thumbnail-featured" onclick="window.open('https://youtu.be/UEgEIzZ9dYo', '_blank')">
+                            <img src="https://img.youtube.com/vi/UEgEIzZ9dYo/maxresdefault.jpg" alt="TRUMP ES el Caballo de Troya Tecnocrático!">
+                            <div class="play-button-featured"><i class="fas fa-play"></i></div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 flex flex-col">
+                        <div class="date-badge mb-4">24/07/2025 ÚLTIMO ANÁLISIS</div>
+                        <h4 class="text-2xl font-bold mb-4 gold-text">TRUMP ES el Caballo de Troya Tecnocrático!</h4>
+                        <p class="text-gray-300 mb-6 flex-grow">La batalla por el control ha comenzado!</p>
+                        <div class="flex gap-4 mt-auto">
+                            <a href="posts/trump-caballo-de-troya.html" class="btn-gradient">Ver Análisis Completo</a>
+                            <a href="https://youtu.be/UEgEIzZ9dYo" target="_blank" class="btn-gradient">Ver Video</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- About Section (Estático) -->
+        <!-- Previous Analysis Section -->
+        <section class="mb-16">
+            <h3 class="text-2xl font-semibold mb-8 gold-text">Análisis Anteriores</h3>
+            <div id="grid-analisis" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Contenido generado por el script -->
+            </div>
+        </section>
+
+        <!-- About Section -->
         <section class="section-bg rounded-2xl p-8">
             <div class="flex flex-col md:flex-row gap-8 items-center">
                 <div class="md:w-1/3">
@@ -73,83 +95,23 @@
             </div>
         </section>
     </main>
-
     <!-- Footer -->
     <footer class="bg-black bg-opacity-90 py-8 border-t border-gray-800">
         <div class="container mx-auto px-4 text-center">
             <div class="flex justify-center space-x-6 mb-4">
-                <a href="https://www.youtube.com/@terapialiberal" target="_blank" class="text-gray-400 hover:text-red-500 transition-colors"><i class="fab fa-youtube text-2xl"></i></a>
-                <a href="https://x.com/terapia_liberal" target="_blank" class="text-gray-400 hover-gold transition-colors"><i class="fa-brands fa-x-twitter text-2xl"></i></a>
-                <a href="https://www.patreon.com/terapialiberal" target="_blank" class="text-gray-400 hover-gold transition-colors"><i class="fab fa-patreon text-2xl"></i></a>
+                <a href="https://www.youtube.com/@terapialiberal" target="_blank" class="text-gray-400 hover:text-red-500 transition-colors">
+                    <i class="fab fa-youtube text-2xl"></i>
+                </a>
+                <a href="https://x.com/terapia_liberal" target="_blank" class="text-gray-400 hover-gold transition-colors">
+                    <i class="fa-brands fa-x-twitter text-2xl"></i>
+                </a>
+                <a href="https://www.patreon.com/terapialiberal" target="_blank" class="text-gray-400 hover-gold transition-colors">
+                    <i class="fab fa-patreon text-2xl"></i>
+                </a>
             </div>
             <p class="text-gray-400">© 2025 Terapia Liberal. Análisis independiente para mentes críticas.</p>
         </div>
     </footer>
-
-    <!-- Scripts para cargar el contenido dinámico -->
-    <script src="js/database.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const featuredContainer = document.getElementById('featured-analysis-container');
-            const gridContainer = document.getElementById('grid-analisis');
-
-            // Encontrar el artículo destacado y los demás
-            const featuredArticle = articlesData.find(article => article.isFeatured);
-            const otherArticles = articlesData.filter(article => !article.isFeatured);
-
-            // Generar y mostrar el artículo destacado
-            if (featuredArticle) {
-                const urlHtml = getArticleUrl(featuredArticle.id);
-                const urlVideo = `https://www.youtube.com/watch?v=${featuredArticle.video_id}`;
-                const featuredHtml = `
-                    <h3 class="text-2xl font-semibold mb-8 gold-text">Análisis Destacado</h3>
-                    <div class="section-bg rounded-2xl p-8">
-                        <div class="flex flex-col lg:flex-row gap-8">
-                            <div class="lg:w-1/2">
-                                <div class="video-thumbnail-featured" onclick="window.open('${urlVideo}', '_blank')">
-                                    <img src="https://img.youtube.com/vi/${featuredArticle.video_id}/maxresdefault.jpg" alt="${featuredArticle.title}">
-                                    <div class="play-button-featured"><i class="fas fa-play"></i></div>
-                                </div>
-                            </div>
-                            <div class="lg:w-1/2 flex flex-col">
-                                <div class="date-badge mb-4">${featuredArticle.date} ÚLTIMO ANÁLISIS</div>
-                                <h4 class="text-2xl font-bold mb-4 gold-text">${featuredArticle.title}</h4>
-                                <p class="text-gray-300 mb-6 flex-grow">${featuredArticle.description}</p>
-                                <div class="flex gap-4 mt-auto">
-                                    <a href="${urlHtml}" class="btn-gradient">Ver Análisis Completo</a>
-                                    <a href="${urlVideo}" target="_blank" class="btn-gradient">Ver Video</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>`;
-                featuredContainer.innerHTML = featuredHtml;
-            }
-
-            // Generar y mostrar la cuadrícula de análisis anteriores
-            if (gridContainer) {
-                const cardsHTML = otherArticles.map(article => {
-                    const urlHtml = getArticleUrl(article.id);
-                    const urlVideo = `https://www.youtube.com/watch?v=${article.video_id}`;
-                    return `
-                    <div class="section-bg rounded-2xl p-6 flex flex-col h-full">
-                        <div class="video-thumbnail mb-4" onclick="window.open('${urlVideo}', '_blank')">
-                            <img src="https://img.youtube.com/vi/${article.video_id}/maxresdefault.jpg" alt="${article.title}">
-                            <div class="play-button"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="flex-grow flex flex-col">
-                            <div class="date-badge mb-3">${article.date} ANÁLISIS PREVIO</div>
-                            <h4 class="text-xl font-bold mb-3 gold-text">${article.title}</h4>
-                            <p class="text-gray-300 mb-4 flex-grow">${article.description}</p>
-                            <div class="flex gap-3 mt-auto">
-                                <a href="${urlHtml}" class="btn-gradient text-sm">Ver Análisis</a>
-                                <a href="${urlVideo}" target="_blank" class="btn-gradient text-sm">Ver Video</a>
-                            </div>
-                        </div>
-                    </div>`;
-                }).join('');
-                gridContainer.innerHTML = cardsHTML;
-            }
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
-</html>```
+</html>
