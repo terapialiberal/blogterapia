@@ -9,6 +9,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos adicionales para el blog */
+        .blog-post-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .blog-post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+        .post-title {
+            transition: color 0.3s ease;
+        }
+        .blog-post-card:hover .post-title {
+            color: #d4af37; /* gold-text */
+        }
+        .post-excerpt {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .read-more-link {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        .read-more-link:hover {
+            color: #fbbf24;
+            text-decoration: underline;
+        }
+        .featured-post {
+            border-left: 4px solid #d4af37;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -17,7 +52,7 @@
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-4">
                     <img src="https://yt3.ggpht.com/ZzVyDrXt4x8YWoKbISHZzC9CCtkEPCN4GRET1Xxf_wssNyw7mfN-xTbBmpwEJHO0DRQrg0Dgug=s68-c-k-c0x00ffffff-no-rj" alt="Terapia Liberal" class="w-12 h-12 rounded-full">
-                    <h1 class="text-2xl font-bold gold-text">Terapia Liberal</h1>
+                    <a href="index.html" class="text-2xl font-bold gold-text hover:text-yellow-500 transition-colors">Terapia Liberal</a>
                 </div>
                 <nav class="flex space-x-6">
                     <a href="https://www.youtube.com/@terapialiberal" target="_blank" class="text-gray-300 hover-gold">
@@ -35,61 +70,84 @@
     </header>
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
-        <!-- Library Hero Section -->
-        <section class="section-bg rounded-2xl py-16 px-8 mb-16">
-            <div class="text-center">
-                <h2 class="text-5xl font-bold mb-4 gold-text">Biblioteca de Investigaciones</h2>
-                <p class="text-gray-300 max-w-3xl mx-auto">Análisis independientes sobre economía, geopolítica y filosofía liberal. Investigaciones profundas que conectan los eventos globales con las agendas ocultas del poder.</p>
-            </div>
+        <!-- Hero/Blog Header Section -->
+        <section class="section-bg rounded-2xl py-12 px-6 mb-12 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 gold-text">Biblioteca de Investigaciones</h1>
+            <p class="text-gray-300 max-w-3xl mx-auto text-lg">Análisis independientes sobre economía, geopolítica y filosofía liberal. Investigaciones profundas que conectan los eventos globales con las agendas ocultas del poder.</p>
         </section>
 
-        <!-- Featured Analysis -->
+        <!-- Featured Analysis (Último Post) -->
         <section class="mb-16">
-            <h3 class="text-2xl font-semibold mb-8 gold-text">Análisis Destacado</h3>
-            <div class="section-bg rounded-2xl p-8">
-                <div class="flex flex-col lg:flex-row gap-8">
+            <h2 class="text-2xl font-semibold mb-6 gold-text border-b border-gray-700 pb-2">Análisis Destacado</h2>
+            <article class="section-bg rounded-2xl p-6 md:p-8 featured-post">
+                <div class="flex flex-col lg:flex-row gap-6 md:gap-8">
                     <div class="lg:w-1/2">
-                        <div class="video-thumbnail-featured" onclick="window.open('https://youtu.be/UEgEIzZ9dYo', '_blank')">
-                            <img src="https://img.youtube.com/vi/UEgEIzZ9dYo/maxresdefault.jpg" alt="TRUMP ES el Caballo de Troya Tecnocrático!">
-                            <div class="play-button-featured"><i class="fas fa-play"></i></div>
+                        <div class="video-thumbnail-featured relative overflow-hidden rounded-lg cursor-pointer" onclick="window.open('https://youtu.be/UEgEIzZ9dYo', '_blank')">
+                            <img src="https://img.youtube.com/vi/UEgEIzZ9dYo/maxresdefault.jpg" alt="TRUMP ES el Caballo de Troya Tecnocrático!" class="w-full h-auto md:h-80 object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                <div class="play-button-featured bg-black bg-opacity-70 text-gold rounded-full p-4 md:p-5">
+                                    <i class="fas fa-play text-xl md:text-2xl"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="lg:w-1/2 flex flex-col">
-                        <div class="date-badge mb-4">24/07/2025 ÚLTIMO ANÁLISIS</div>
-                        <h4 class="text-2xl font-bold mb-4 gold-text">TRUMP ES el Caballo de Troya Tecnocrático!</h4>
-                        <p class="text-gray-300 mb-6 flex-grow">La batalla por el control ha comenzado!</p>
-                        <div class="flex gap-4 mt-auto">
-                            <a href="posts/trump-caballo-de-troya.html" class="btn-gradient">Ver Análisis Completo</a>
-                            <a href="https://youtu.be/UEgEIzZ9dYo" target="_blank" class="btn-gradient">Ver Video</a>
+                        <div class="date-badge mb-3 py-1 px-3 inline-block">24/07/2025</div>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 post-title">TRUMP ES el Caballo de Troya Tecnocrático!</h3>
+                        <p class="text-gray-300 mb-4 flex-grow">La batalla por el control ha comenzado!</p>
+                        <div class="mt-auto">
+                            <a href="posts/trump-caballo-de-troya.html" class="btn-gradient inline-block px-4 py-2 text-sm md:text-base mr-3">Leer Análisis</a>
+                            <a href="https://youtu.be/UEgEIzZ9dYo" target="_blank" class="btn-gradient inline-block px-4 py-2 text-sm md:text-base">Ver Video</a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
         </section>
 
-        <!-- Previous Analysis Section -->
+        <!-- Blog Posts Grid (Análisis Anteriores) -->
         <section class="mb-16">
-            <h3 class="text-2xl font-semibold mb-8 gold-text">Análisis Anteriores</h3>
-            <div id="grid-analisis" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <h2 class="text-2xl font-semibold mb-6 gold-text border-b border-gray-700 pb-2">Análisis Anteriores</h2>
+            <div id="grid-analisis" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Contenido generado por el script -->
+                <!-- Ejemplo de estructura de una tarjeta de post (generada por JS) -->
+                <!--
+                <article class="blog-post-card section-bg rounded-2xl overflow-hidden flex flex-col h-full">
+                    <div class="video-thumbnail relative overflow-hidden cursor-pointer" onclick="window.open('VIDEO_URL', '_blank')">
+                        <img src="THUMBNAIL_URL" alt="Título del Análisis" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <div class="play-button bg-black bg-opacity-70 text-gold rounded-full p-3">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <div class="date-badge mb-2 py-1 px-2 text-xs inline-block">FECHA</div>
+                        <h3 class="text-lg font-bold mb-2 post-title">TÍTULO</h3>
+                        <p class="text-gray-300 text-sm mb-4 flex-grow post-excerpt">DESCRIPCIÓN</p>
+                        <div class="mt-auto">
+                            <a href="POST_URL" class="read-more-link text-sm">Leer más →</a>
+                            <a href="VIDEO_URL" target="_blank" class="read-more-link text-sm float-right">Ver Video →</a>
+                        </div>
+                    </div>
+                </article>
+                -->
             </div>
         </section>
 
-        <!-- About Section -->
-        <section class="section-bg rounded-2xl p-8">
-            <div class="flex flex-col md:flex-row gap-8 items-center">
-                <div class="md:w-1/3">
-                    <img src="https://i.postimg.cc/8C3ZkxNy/1660176107980.jpg" alt="Nicolás Martínez Lage" class="w-48 h-48 rounded-full mx-auto object-cover">
+        <!-- Author Bio Section -->
+        <section class="section-bg rounded-2xl p-6 md:p-8">
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+                <div class="md:w-1/4 flex justify-center">
+                    <img src="https://i.postimg.cc/8C3ZkxNy/1660176107980.jpg" alt="Nicolás Martínez Lage" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-2 border-gold">
                 </div>
-                <div class="md:w-2/3">
-                    <h3 class="text-2xl font-bold mb-2 gold-text">Nicolás Martínez Lage</h3>
-                    <p class="text-gray-400 mb-4">Analista Independiente</p>
-                    <h4 class="text-xl font-semibold mb-3 gold-text">Sobre Terapia Liberal</h4>
-                    <p class="text-gray-300 mb-4">Plataforma de análisis independiente que conecta eventos económicos y geopolíticos globales con las agendas de poder. Investigaciones profundas que van más allá de la narrativa mainstream para revelar las estructuras y mecanismos del control financiero mundial.</p>
-                    <div class="flex gap-4 flex-wrap">
-                        <span class="bg-gray-700 px-3 py-1 rounded-lg text-sm">Análisis Económico</span>
-                        <span class="bg-gray-700 px-3 py-1 rounded-lg text-sm">Geopolítica</span>
-                        <span class="bg-gray-700 px-3 py-1 rounded-lg text-sm">Filosofía Liberal</span>
+                <div class="md:w-3/4 text-center md:text-left">
+                    <h2 class="text-xl md:text-2xl font-bold mb-1 gold-text">Nicolás Martínez Lage</h2>
+                    <p class="text-gray-400 mb-3 text-sm md:text-base">Analista Independiente</p>
+                    <p class="text-gray-300 mb-4 text-sm md:text-base">Plataforma de análisis independiente que conecta eventos económicos y geopolíticos globales con las agendas de poder. Investigaciones profundas que van más allá de la narrativa mainstream para revelar las estructuras y mecanismos del control financiero mundial.</p>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-2">
+                        <span class="bg-gray-700 px-2 py-1 rounded text-xs">Análisis Económico</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded text-xs">Geopolítica</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded text-xs">Filosofía Liberal</span>
                     </div>
                 </div>
             </div>
@@ -109,7 +167,7 @@
                     <i class="fab fa-patreon text-2xl"></i>
                 </a>
             </div>
-            <p class="text-gray-400">© 2025 Terapia Liberal. Análisis independiente para mentes críticas.</p>
+            <p class="text-gray-400 text-sm">&copy; 2025 Terapia Liberal. Análisis independiente para mentes críticas.</p>
         </div>
     </footer>
     <script src="js/script.js"></script>
